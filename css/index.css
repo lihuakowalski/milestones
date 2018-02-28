@@ -25,7 +25,10 @@ aside article {
   background-color: rgba(195, 216, 45, 0.5);
   padding: 1em; }
 
-footer p {
-  background-color: rgba(93, 97, 94, 0.8); }
+footer {
+  margin-top: .7em; }
+  footer p {
+    background-color: rgba(93, 97, 94, 0.8);
+    text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
