@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Milestone 1 Sample page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- font Awesome -->
+<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+<!-- web font -->
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+<style>
+
+#menu2 {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    #menu1 {
+	display: none;
+    }
+
+    #menu2 {
+	display: block;
+    }
+}
+
+</style>
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<main class="container">
+    <header class="row">
+    	<section class="col-sm-12 col-md-12">Milestone 1</section>
+    </header>
+    <nav class="row navbar navbar-default">
+    	<section class="col-sm-12 col-md-12">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>
+    </ul>
+
+        <ul class="nav navbar-nav" id="menu2">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+        </ul>
+	</section>
+    </nav>
+    <main class="row">
+    	<section class="col-sm-8 col-md-9">
+            <article class="notebook">
+            	<h1><i class="fa fa-edit"></i>&nbsp;First Article</h1>
+		<p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
+            </article>
+            <article class="notebook">
+            	<h1><i class="fa fa-edit"></i>&nbsp;Second Article</h1>
+		<p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
+            </article>
+        </section>
+        <aside class="col-sm-4 col-md-3">
+	    <article>
+                <h4>Side Notice</h4>
+                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
+	    </article>
+    	</aside>
+    </main>
+    <footer class="row">
+    	<div class="col-sm-12 col-md-12">
+            <p>Footer</p>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
