@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Milestone 1 - Home</title>
+<title>Milestone 1 - Q and A</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -42,7 +42,7 @@
 
 <body class="container">
     <header class="row">
-        <section class="col-sm-12 col-md-12">M.S. 1</section>
+        <section class="col-sm-12">M.S. 1</section>
     </header>
     <nav class="row navbar navbar-default">
         <section class="col-sm-12">
@@ -54,13 +54,12 @@
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav" id="menu2">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="questions.html">Q & A</a></li>
+                <li class="active"><a href="questions.html">Q & A</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </section>
-
     </nav>
     <main class="row">
         <section class="col-sm-12">
@@ -107,22 +106,59 @@
                 </a>
             </div>
         </section>
-        <section class="col-sm-8 col-md-9">
-            <article class="notebook">
-                <h1><i class="fa fa-edit"></i>&nbsp;First Article</h1>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
-            <article class="notebook">
-                <h1><i class="fa fa-edit"></i>&nbsp;Second Article</h1>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
+        <section class="col-sm-8">
+            <h4 class="well well-sm">&nbsp;&nbsp;Frequently asked Qeuestions:</h4>
+            <ol>
+                <p>
+                    <li data-toggle="collapse" data-target="#ans1">Qestion1: What's your job?</li>
+                        <div id="ans1" class="collapse">
+                            Answer 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                </p>
+                <p>
+                    <li data-toggle="collapse" data-target="#ans2">Qestion2: What's your favorate color?</li>
+                        <div id="ans2" class="collapse">
+                            Answer 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                </p>
+                <p>
+                    <li data-toggle="collapse" data-target="#ans3">Qestion3: Passtion?</li>
+                        <div id="ans3" class="collapse">
+                            Answer 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                </p>
+            </ol>
+
+            <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">More Questions?</button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">More questions?</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please send us an inquery through the contact <a href="contact.html#contactForm">form</a>.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
-        <aside class="col-sm-4 col-md-3">
-            <article>
-                <h4>Side Notice</h4>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
-        </aside>
     </main>
     <footer class="row">
         <div class="col-sm-12">

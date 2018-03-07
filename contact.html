@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Milestone 1 - Home</title>
+<title>Milestone 1 - Contact form</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -42,10 +42,10 @@
 
 <body class="container">
     <header class="row">
-        <section class="col-sm-12 col-md-12">M.S. 1</section>
+        <section class="col-sm-12">M.S. 1</section>
     </header>
     <nav class="row navbar navbar-default">
-        <section class="col-sm-12">
+        <section class="col-sm-12 col-md-12">
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
             <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
@@ -54,13 +54,12 @@
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav" id="menu2">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="questions.html">Q & A</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
             </ul>
         </section>
-
     </nav>
     <main class="row">
         <section class="col-sm-12">
@@ -107,27 +106,44 @@
                 </a>
             </div>
         </section>
-        <section class="col-sm-8 col-md-9">
-            <article class="notebook">
-                <h1><i class="fa fa-edit"></i>&nbsp;First Article</h1>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
-            <article class="notebook">
-                <h1><i class="fa fa-edit"></i>&nbsp;Second Article</h1>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
-        </section>
-        <aside class="col-sm-4 col-md-3">
-            <article>
-                <h4>Side Notice</h4>
-                <p>Web design has come a long way since its beginning, especially in terms of styling. Take a look at a website from 10 years ago and compare it to one from today. The differences are enormous. One of the major changes you will notice is the background. Today, backgrounds are one of the core features that determine how visually interesting a website is. The background holds the theme of the website...</p>
-            </article>
-        </aside>
+        <p class="col-sm-12">
+            <a href="#" data-toggle="popover" title="Info:" data-content="Please check F&A page for Frequently Asked Questions"><button type="button" class="btn btn-success">Friendly remind</button></a>
+        </p>
+        <form class="col-xs-12 col-sm-7 col-md-5" id="contactForm" action="confirm.html">
+            <div class="form-group">
+                <label for="name">Name:&nbsp;<span class="attn">*</span></label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:&nbsp;<span class="attn">*</span></label><br />
+                <input type="radio" name="gender" value="1">&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" value="2">&nbsp;&nbsp;Female
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:&nbsp;<span class="attn">*</span></label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            Must complete all the fiels with <span class="attn">*</span>
+            <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
+        </form>
     </main>
     <footer class="row">
         <div class="col-sm-12">
             <p>&copy; Copyright Dummy sample website</p>
         </div>
     </footer>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+    </script>
 </body>
 </html>

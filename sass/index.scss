@@ -9,10 +9,10 @@ header {
     section{
         height: 2.3em;
         padding: .4em 1em;
-	font-family: 'Cabin Sketch', cursive;
+        font-family: 'Cabin Sketch', cursive;
         font-size: 5em;
-	color: rgb(235, 97, 32) !important;
-	text-shadow: 0 1px 0 #ccc, 
+        color: rgb(235, 97, 32) !important;
+        text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
                0 4px 0 #b9b9b9,
@@ -27,27 +27,37 @@ header {
     }
 }
 
+.attn {
+    color: rgb(235, 97, 32);
+}
+
+main {
+    &>section {
+        margin-bottom: 2em;
+    }
+}
+
 .navbar {
     display:flex;
     align-items:center;
 }
 .notebook {
-    margin: 1em;
+    margin-top: 0em;
+    margin-bottom: 1em;
     padding: 16px;
     line-height: 1.5em;
     border-radius: 15px 50px 15px 50px;
     border: thin dotted rgba(158,158,158,.5);
     position: relative;
     background-color: #ffffe7;
-    background-image:
-        linear-gradient(rgba(156,149,143,.3) .1em, transparent .1em);
+    background-image: linear-gradient(rgba(156,149,143,.3) .1em, transparent .1em);
     background-size: 100% 1.5em;
 }
 
 aside {
     article {
-	background-color: rgba(195,216,45,.5);
-	padding: 1em;
+        background-color: rgba(195,216,45,.5);
+        padding: 1em;
     }
 }
 
@@ -55,6 +65,6 @@ footer {
     margin-top: .7em;
     p {
         background-color: rgba(93,97,94,.8);
-	text-align: center;
+        text-align: center;
     }
 }
