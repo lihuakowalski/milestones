@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Milestone 1 - About us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- font Awesome -->
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- web font -->
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+<style>
+
+#menu2 {
+    display: none;
+}
+
+@media screen and (min-width: 770px) {
+    #menu1 {
+        display: none;
+    }
+
+    #menu2 {
+        display: block;
+    }
+}
+
+</style>
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="container">
+    <header class="row">
+        <section class="col-sm-12 col-md-12">M.S. 1</section>
+    </header>
+    <nav class="row navbar navbar-default">
+        <section class="col-sm-12">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="about.html">About</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="questions.html">Q & A</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="staffs.html">Our Staffs</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav" id="menu2">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="questions.html">Q & A</a></li>
+                <li><a href="staffs.html">Our Staffs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+    </nav>
+    <main class="row">
+        <section class="col-sm-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/img_1.jpg" alt="Passion" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Our Passion</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/img_2.jpg" alt="goal" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Goal</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/img_3.jpg" alt="achievement" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Achievement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <section class="row">
+        <h2>About Us</h2>&nbsp;(Please click table content to test Event Delegation function)
+        <p>This is establised 2008...</p>
+        <article class="col-xs-12 col-sm-9 col-md-8"> <!-- col-xs-12 col-sm-9 col-md-7 media -->
+
+            <table class="table" id="table_elements">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="success">CEO</td>
+                        <td>John Defaultson</td>
+                    </tr>
+                    <tr>
+                        <td class="success">Executive VP</td>
+                        <td>Doe</td>
+                    </tr>
+                    <tr>
+                        <td class="success">Location</td>
+                        <td>Broadway New York, NY</td>
+                    </tr>
+                    <tr>
+                        <td class="success">Phone</td>
+                        <td>212-123-4567</td>
+                    </tr>
+                    <tr>
+                        <td class="success">Fax</td>
+                        <td>212-123-4568</td>
+                    </tr>
+                    <tr>
+                        <td class="success">History</td>
+                        <td>1998: .....<br />1999:...<br /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </article>
+        <aside class="col-xs-12 col-sm-3 col-md-4">
+            <img src="img/img_5.jpg" class="img-circle" alt="Cinque Terre" width="100%">
+        </aside>
+    </section>
+    <button onclick="getData();">Show our staffs</button>&nbsp;(Use Promise & xhr)
+    <div id='otherStaffs'></div>
+    <footer class="row">
+        <div class="col-sm-12">
+            <p>&copy; Copyright Dummy sample website</p>
+        </div>
+    </footer>
+
+<script>
+// Event Delegaton
+document.getElementById("table_elements").addEventListener("click", function(e) {
+    //console.log('table elements are clicked:' + e.target.childNodes[0].nodeValue);
+    e.target.firstChild.nodeValue = "I was clicked!";
+})
+// Promise function
+function getData() {
+    let p = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "api/users_info.php");
+        xhr.onload = () => resolve(xhr.responseText);
+        xhr.onerror = () => reject(xhr.statusText);
+        xhr.send();
+    });
+    p.then(function(res){
+        let result = JSON.parse(res);
+        let content = result[0].firstName + ' ' + result[0].lastName + '<br />';
+            content += result[1].firstName + ' ' + result[1].lastName;
+        document.getElementById('otherStaffs').innerHTML = content;
+    })
+}
+
+</script>
+</body>
+</html>
