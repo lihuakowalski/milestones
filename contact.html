@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Milestone 1 - Contact form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- font Awesome -->
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<!-- web font -->
+<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+
+<style>
+
+#menu2 {
+    display: none;
+}
+
+@media screen and (min-width: 770px) {
+    #menu1 {
+        display: none;
+    }
+
+    #menu2 {
+        display: block;
+    }
+}
+
+table {
+    width: 500px;
+}
+</style>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/contacts.js"></script>
+</head>
+
+<body class="container">
+    <header class="row">
+        <section class="col-sm-12">M.S. 1</section>
+    </header>
+    <nav class="row navbar navbar-default">
+        <section class="col-sm-12 col-md-12">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="index.html">Home</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="about.html">About</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="questions.html">Q & A</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="staffs.html">Our Staffs</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav" id="menu2">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="questions.html">Q & A</a></li>
+                <li><a href="staffs.html">Our Staffs</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+        </section>
+    </nav>
+    <main class="row">
+        <section class="col-sm-12">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="img/img_1.jpg" alt="Passion" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Our Passion</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/img_2.jpg" alt="goal" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Goal</p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="img/img_3.jpg" alt="achievement" style="width:100%;">
+                        <div class="carousel-caption">
+                            <p>Achievement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <p class="col-sm-12">
+            <a href="#" data-toggle="popover" title="Info:" data-content="Please check F&A page for Frequently Asked Questions"><button type="button" class="btn btn-success">Friendly remind</button></a>
+        </p>
+        <!--form class="col-xs-12 col-sm-7 col-md-5" id="contactForm" action=""-->
+            <div class="form-group">
+                <label for="name">Name:&nbsp;<span class="attn">*</span></label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:&nbsp;<span class="attn">*</span></label><br />
+                <input type="radio" name="gender" value="M">&nbsp;&nbsp;Male&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" value="F">&nbsp;&nbsp;Female
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:&nbsp;<span class="attn">*</span></label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            Must complete all the fields with <span class="attn">*</span>
+            <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <div type="submit" class="btn btn-default" onclick="return btnclick();">Submit</div>&nbsp;(Use Prototypal inheritance & callback function)
+        <br /><br />
+        <!--/form-->
+        <table id='list_question'>
+            <tr><th>Status</th><th>Name</th><th>Gender</th><th>Email</th><th>Comment</th></tr>
+        </table>
+    </main>
+    <footer class="row">
+        <div class="col-sm-12">
+            <p>&copy; Copyright Dummy sample website</p>
+        </div>
+    </footer>
+    <script>
+
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
+
+    </script>
+
+</body>
+</html>
