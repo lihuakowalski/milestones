@@ -7,12 +7,6 @@ var webSocketsServerPort = 1337;
 var webSocketServer = require('websocket').server;
 var http = require('http');
 
-var colorMeaning = {
-    'red': 'Red is the color of fire and blood, so it is associated with energy, war, danger, strength, power, determination as well as passion, desire, and love.',
-    'orange':'Orange combines the energy of red and the happiness of yellow.'
-
-}
-
 //connection mysql
 var mysql = require('mysql');
 
