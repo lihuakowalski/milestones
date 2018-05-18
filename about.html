@@ -53,6 +53,7 @@
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="questions.html">Q & A</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="staffs.html">Our Staffs</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="contact.html">Contact</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="game.html">Little Game</a></li>
             </ul>
             <ul class="nav navbar-nav" id="menu2">
                 <li><a href="index.html">Home</a></li>
@@ -60,6 +61,7 @@
                 <li><a href="questions.html">Q & A</a></li>
                 <li><a href="staffs.html">Our Staffs</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="game.html">Little Game</a></li>
             </ul>
         </section>
     </nav>
@@ -179,6 +181,7 @@ function getData() {
     });
     p.then(function(res){
         let result = JSON.parse(res);
+        console.log(result);
         let content = result[0].firstName + ' ' + result[0].lastName + '<br />';
             content += result[1].firstName + ' ' + result[1].lastName;
         document.getElementById('otherStaffs').innerHTML = content;

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Milestone 1 - Q and A</title>
+<title>Milestone 1 - About us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Latest compiled and minified CSS -->
@@ -35,20 +35,53 @@
         display: block;
     }
 }
-@media screen and (max-width: 670px) {
-    .collapse {
 
-        display: block !important;
+    * {
+        font-family:tahoma;
+        font-size:12px;
+        padding:0px;
+        margin:0px;
     }
-}
-
+    p {
+        line-height:18px;
+    }
+    /*div {
+        width:500px;
+        margin-left:auto;
+        margin-right:auto;
+    }*/
+    #content {
+        padding:5px;
+        background:#ddd;
+        border-radius:5px;
+        overflow-y: scroll;
+        border:1px solid #CCC;
+        margin-top:10px;
+        height: 60px;
+    }
+    #input {
+        border-radius:2px;
+        border:1px solid #ccc;
+        margin-top:10px;
+        padding:5px;width:400px;
+    }
+    #status {
+        width:88px;
+        display:block;
+        float:left;
+        margin-top:15px;
+    }
 </style>
 <link rel="stylesheet" href="css/index.css">
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body class="container">
     <header class="row">
-        <section class="col-sm-12">M.S. 1</section>
+        <section class="col-sm-12 col-md-12">M.S. 1</section>
     </header>
     <nav class="row navbar navbar-default">
         <section class="col-sm-12">
@@ -64,10 +97,10 @@
             <ul class="nav navbar-nav" id="menu2">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li class="active"><a href="questions.html">Q & A</a></li>
+                <li><a href="questions.html">Q & A</a></li>
                 <li><a href="staffs.html">Our Staffs</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="game.html">Little Game</a></li>
+                <li class="active"><a href="game.html">Little Game</a></li>
             </ul>
         </section>
     </nav>
@@ -116,64 +149,24 @@
                 </a>
             </div>
         </section>
-        <section class="col-sm-8">
-            <h4 class="well well-sm">&nbsp;&nbsp;Frequently asked Qeuestions:</h4>
-            <ol>
-                <p>
-                    <li data-toggle="collapse" data-target="#ans1">Qestion1: What's your job?</li>
-                        <div id="ans1" class="collapse">
-                            Answer 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                </p>
-                <p>
-                    <li data-toggle="collapse" data-target="#ans2">Qestion2: What's your favorate color?</li>
-                        <div id="ans2" class="collapse">
-                            Answer 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                </p>
-                <p>
-                    <li data-toggle="collapse" data-target="#ans3">Qestion3: Passion?</li>
-                        <div id="ans3" class="collapse">
-                            Answer 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                </p>
-            </ol>
-
-            <button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#myModal">More Questions?</button>
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">More questions?</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>Please send us an inquery through the contact <a href="contact.html#contactForm">form</a>.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
     </main>
+    <section class="row" style="height:280px;">
+        <h2>What's your favorite color?</h2>
+        <div>(The color data stored in mysql, node.js connect to db retrieve data and return to frontend)</div><br />
+        <aside class="col-xs-12">
+            <div id="content"></div>
+            <div>
+                <span id="status">Connecting...</span>
+                <input type="text" id="input" disabled="disabled" />
+            </div>
+        </aside>
+
+    </section>
     <footer class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12 col-sm-3 col-md-4"">
             <p>&copy; Copyright Dummy sample website</p>
         </div>
     </footer>
+    <script src="js/frontend.js"></script>
 </body>
 </html>
