@@ -19,7 +19,6 @@ Contacts.prototype.add = function(callback) {
     callback(this);
 }
 
-
 function appendData(data){
     var elm = "<tr>";
         elm += "<td>" + data.status + "</td>";
