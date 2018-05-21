@@ -9,19 +9,7 @@ function btnclick(){
     var user = new roadedMyContact(u_name, u_gender, u_email, u_comment);
     user.add(appendData);
 };
-/*
-function Contacts(name, gender, email, comment) {
-    this.name = name;
-    this.gender = gender;
-    this.email = email;
-    this.comment = comment;
-}
 
-Contacts.prototype.status = 'new';
-Contacts.prototype.add = function(callback) {
-    callback(this);
-}
-*/
 function appendData(data){
     var elm = "<tr>";
         elm += "<td>" + data.status + "</td>";
