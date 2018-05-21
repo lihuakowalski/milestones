@@ -1,12 +1,15 @@
+var roadedMyContact = require('.mymodule');
+
 function btnclick(){
     let u_name = $('#name').val();
     let u_gender = $("input[name='gender']:checked"). val();
     let u_email = $('#email').val();
     let u_comment = $('#comment').val();
-    var user = new Contacts(u_name, u_gender, u_email, u_comment);
+    //var user = new Contacts(u_name, u_gender, u_email, u_comment);
+    var user = new roadedMyContact(u_name, u_gender, u_email, u_comment);
     user.add(appendData);
 };
-
+/*
 function Contacts(name, gender, email, comment) {
     this.name = name;
     this.gender = gender;
@@ -18,7 +21,7 @@ Contacts.prototype.status = 'new';
 Contacts.prototype.add = function(callback) {
     callback(this);
 }
-
+*/
 function appendData(data){
     var elm = "<tr>";
         elm += "<td>" + data.status + "</td>";
